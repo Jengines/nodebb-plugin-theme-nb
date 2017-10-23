@@ -15,7 +15,7 @@
 				</a>
 				<!-- ENDIF config.showSiteTitle -->
 
-				<div component="navbar/title" class="visible-xs hidden">
+				<div component="navbar/title">
 					<span></span>
 				</div>
 			</div>
@@ -45,7 +45,7 @@
 					<!-- IF !config.disableChat -->
 					<li class="chats dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="{relative_path}/user/{user.userslug}/chats" title="[[global:header.chats]]" id="chat_dropdown" component="chat/dropdown" data-ajaxify="false" role="button">
-							<i component="chat/icon" class="fa fa-comment-o fa-fw"></i> <span class="visible-xs-inline">[[global:header.chats]]</span>
+							<i component="chat/icon" class="fa fa-comment-o fa-fw"></i> <span >[[global:header.chats]]</span>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="chat_dropdown">
 							<li>
@@ -65,7 +65,7 @@
 						<label for="user-control-list-check" class="dropdown-toggle" data-toggle="dropdown" id="user_dropdown" title="[[global:header.profile]]" role="button">
 							<img component="header/userpicture" src="{user.picture}" alt="{user.username}"<!-- IF !user.picture --> style="display: none;"<!-- ENDIF !user.picture --> />
 							<div component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor};<!-- IF user.picture --> display: none;<!-- ENDIF user.picture -->">{user.icon:text}</div>
-							<span id="user-header-name" class="visible-xs-inline">{user.username}</span>
+							<span id="user-header-name" >{user.username}</span>
 						</label>
 						<input type="checkbox" class="hidden" id="user-control-list-check" aria-hidden="true">
 						<ul id="user-control-list" component="header/usercontrol" class="dropdown-menu" aria-labelledby="user_dropdown">
@@ -141,14 +141,14 @@
 					<!-- IF allowRegistration -->
 					<li>
 						<a href="{relative_path}/register">
-							<i class="fa fa-pencil visible-xs-inline"></i>
+							<i class="fa fa-pencil ></i>
 							<span>[[global:register]]</span>
 						</a>
 					</li>
 					<!-- ENDIF allowRegistration -->
 					<li>
 						<a href="{relative_path}/login">
-							<i class="fa fa-sign-in visible-xs-inline"></i>
+							<i class="fa fa-sign-in ></i>
 							<span>[[global:login]]</span>
 						</a>
 					</li>
@@ -168,7 +168,7 @@
 							</div>
 						</form>
 					</li>
-					<li class="visible-xs" id="search-menu">
+					<li  id="search-menu">
 						<a href="{relative_path}/search">
 							<i class="fa fa-search fa-fw"></i> [[global:search]]
 						</a>
@@ -230,7 +230,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<a href="{relative_path}/login">
-							<i class="fa fa-sign-in visible-xs-inline"></i>
+							<i class="fa fa-sign-in "></i>
 							<span>[[global:login]]</span>
 						</a>
 					</li>
